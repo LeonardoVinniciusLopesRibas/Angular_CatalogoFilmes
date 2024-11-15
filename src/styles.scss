@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+
+.background-external {
+  background-color: #0b061a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.background-internal {
+  background-color: #120929;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+.font-white{
+  color: #eaeaf1 !important;
+}
+
+.font-red{
+  color: #ff1e1e !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #0b061a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,27 @@
+.poster-image {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.poster-image:hover {
+  transform: scale(1.1);
+}
+
+.poster-image img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.star-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.star-icon.favorite {
+  color: gold;
+}
+
+.star-icon:hover {
+  color: yellow;
+}

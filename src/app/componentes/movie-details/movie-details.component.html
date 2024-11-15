@@ -1,0 +1,77 @@
+<div class="w-100 h-100 p-4 background-external">
+  <div class="rounded-3 m-4 h-100 background-internal  glass-effect">
+    <div *ngIf="movieDetails">
+      <div class="fs-5 fw-bold text-center">{{ movieDetails.Title }}</div>
+
+      <div class="d-flex">
+        <div class="poster-image ms-5 mt-5 d-flex flex-column">
+          <img [src]="movieDetails.Poster" alt="Poster Image"/>
+          <div class="d-flex flex-column">
+            <div class="fs-4 fw-bold font-red">Actors</div>
+            <div>{{ movieDetails.Actors }}</div>
+
+          </div>
+          <div class="d-flex">
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Time</div>
+              <div>{{ movieDetails.Runtime }}</div>
+            </div>
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Language</div>
+              <div>{{ movieDetails.Language }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="m-5">
+          <div class="d-flex flex-column">
+            <div class="fs-4 fw-bold font-red">About</div>
+            <div>{{ movieDetails.Plot }}</div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Year</div>
+              <div>{{ movieDetails.Year }}</div>
+            </div>
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Country</div>
+              <div>{{ movieDetails.Country }}</div>
+            </div>
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Genre</div>
+              <div>{{ movieDetails.Genre }}</div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Director</div>
+              <div>{{ movieDetails.Director }}</div>
+            </div>
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Actors</div>
+              <div>{{ movieDetails.Actors }}</div>
+            </div>
+            <div class="d-flex w-50 flex-column">
+              <div class="fs-4 fw-bold font-red">Writer</div>
+              <div>{{ movieDetails.Writer }}</div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <div class="fs-4 d-flex fw-bold font-red">Ratings</div>
+            <div *ngFor="let rating of movieDetails.Ratings">
+              <div>{{ rating.Source }}</div>
+              <div>{{ rating.Value }}</div>
+            </div>
+          </div>
+          <span
+            (click)="toggleFavorite()"
+            [class.favorite]="isFavorite()"
+            class="star-icon">
+          ★
+        </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

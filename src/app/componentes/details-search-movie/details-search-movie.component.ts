@@ -34,7 +34,7 @@ export class DetailsSearchMovieComponent {
         if(this.apiResponse.Response === "False" && this.apiResponse.Error === "Too many results.") {
           const Toast = Swal.mixin({
             toast: true,
-            position: "top-end",
+            position: "bottom-end",
             showConfirmButton: false,
             timer: 10000,
             timerProgressBar: true,
@@ -50,7 +50,7 @@ export class DetailsSearchMovieComponent {
         } else if(this.apiResponse.Response === "False" && this.apiResponse.Error === "Movie not found!") {
           const Toast = Swal.mixin({
             toast: true,
-            position: "top-end",
+            position: "bottom-end",
             showConfirmButton: false,
             timer: 10000,
             timerProgressBar: true,

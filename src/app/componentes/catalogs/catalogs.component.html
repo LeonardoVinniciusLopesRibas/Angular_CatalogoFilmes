@@ -1,14 +1,14 @@
 <div class="color full-screen">
   <div class="row">
     <div class="col-xl-2 col-xxl-2 col-lg-2 col-sm-2 col-md-2 ">
-      <div class="m-5">
+      <div class="m-3">
       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
         <i class="fa-solid fa-bars fs-4" style="color: #ffffff;"></i>
       </button>
       </div>
     </div>
-    <div class="col-xl-10 col-xxl-10 col-lg-10 col-sm-10 col-md-10">
-      <div class="m-5">
+    <div class="col-xl-10 col-xxl-10 col-lg-10 col-sm-10 col-md-10 d-flex">
+      <div class="m-5 justify-content-center w-75">
         <mdb-form-control>
           <input mdbInput type="text" id="form1" class="form-control font-white" autocomplete="off"
                  (keyup.enter)="searchMovieAndSeries()" type="text" [(ngModel)]="searchControl"/>

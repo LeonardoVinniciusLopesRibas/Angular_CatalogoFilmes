@@ -1,18 +1,18 @@
-<div class="w-100 h-auto p-2 background-external">
-  <div class="rounded-3 m-4 h-100 background-internal text-center glass-effect">
-    <div *ngFor="let movies of apiResponse.Search">
-      <div class="m-3 p-3 shadow-lg">
-        <div class="d-flex">
+<div class="color full-screen overflow-x-hidden">
+  <div class="row">
+    <div class="col-12 p-5">
+      <div class="row d-flex m-3 p-3 rounded-5 color-interno" *ngFor="let movies of apiResponse.Search">
+        <div class="col-12 col-md-4 d-flex justify-content-center mb-3 mb-md-0">
           <div class="poster-image">
-            <img [src]="movies.Poster" alt="Não possui imagem">
+            <img [src]="movies.Poster" class="img-fluid rounded text-light" alt="Não possui imagem">
           </div>
-          <div class="flex-lg-grow-1 d-flex flex-column cursor-pointer text-center justify-content-center align-items-center"
-               routerLink="/principal/moviedetails/{{movies.imdbID}}">
-            <div class="fonte fw-bold">Title: {{ movies.Title }}</div>
-            <div class="fs-5">Category: {{ movies.Type }}</div>
-            <div class="fs-5">Year: {{ movies.Year }}</div>
+        </div>
+        <div class="col-12 col-md-8 d-flex flex-column text-center text-md-start justify-content-center">
+          <div routerLink="/principal/moviedetails/{{movies.imdbID}}" class="cursor-pointer">
+            <div class="fonte fw-bold text-light">Title: {{ movies.Title }}</div>
+            <div class="fs-6 text-light">Category: {{ movies.Type }}</div>
+            <div class="fs-6 text-light">Year: {{ movies.Year }}</div>
           </div>
-
         </div>
       </div>
     </div>

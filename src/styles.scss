@@ -18,6 +18,19 @@
   box-sizing: border-box;
 }
 
+.color{
+  background-color: #512F8FFF;
+}
+
+.color-interno{
+  background-color: #6610f2;
+}
+
+.color-purple{
+  background-color: var(--bs-purple);
+}
+
+
 
 body {
   font-family: Arial, sans-serif;
@@ -26,6 +39,13 @@ body {
 html, body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
+
+}
+
+.full-screen {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 
@@ -35,6 +55,44 @@ html, body {
 
 .font-red{
   color: #ff1e1e !important;
+}
+
+.button-pai{
+  background-color: white !important;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #000;
+  height: 30px;
+}
+.button-filho{
+  background-color: #eaeaea !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  color: #000;
+  height: 30px;
+}
+
+.button-pai:hover{
+  background-color: white !important;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #000;
+  height: 30px;
+}
+.button-filho:hover{
+  background-color: #eaeaea !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  color: #000;
+  height: 30px;
 }
 
 .cursor-pointer{
@@ -48,4 +106,8 @@ html, body {
   padding: 20px;
   border: 1px solid #0b061a;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cor-button-close{
+  --#{$prefix}btn-close-color: #{$btn-close-color};
 }

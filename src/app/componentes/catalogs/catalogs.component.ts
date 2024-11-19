@@ -28,11 +28,16 @@ export class CatalogsComponent {
   searchI: SearchI = new SearchI();
   fixedMovieOne: SearchI = new SearchI();
   fixedMovieTwo: SearchI = new SearchI();
+  showFavoritos: boolean = false;
+
   imdbIDmovieOne: string = 'tt13622970';
   imdbIDmovieTwo: string = 'tt27911000';
 
   constructor() {
     this.searchAnSpecificMovie();
+  }
+  toggleFavoritos() {
+    this.showFavoritos = !this.showFavoritos;
   }
 
   searchAnSpecificMovie() {

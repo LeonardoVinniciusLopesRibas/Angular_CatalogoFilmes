@@ -4,9 +4,9 @@
     <i class="fa-solid fa-house fs-5" style="color: #ffffff;"></i>
   </button>
   <div class="p-5 d-flex">
-    <div class="row gap-5 justify-content-center">
+    <div class="row gap-5 justify-content-center justify-content-xxl-center">
       <div
-        class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 cursor-pointer rounded-3 color-interno text-center p-3 shadow"
+        class=" col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4 cursor-pointer rounded-3 color-interno text-center p-3 shadow"
         *ngFor="let movie of moviesFavorite" routerLink="/principal/moviedetails/{{movie.imdbID}}">
         <img
           [src]="movie.Poster"
